@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Calculadora em JavaScript</h1>
     <div class="container">
-        <input type="text" name="" id="" class="tela" disabled>
+        <input type="text" id="display" class="tela" disabled>
         <div class="grid_buttons">
-            <div class="clear">C</div>
-            <div class="backspace">X</div>
-            <div class="divisao">/</div>
-            <div class="multiplicar">*</div>
-            <div class="sete">7</div>
-            <div class="oito">8</div>
-            <div class="nove">9</div>
-            <div class="subtrair">-</div>
-            <div class="quatro">4</div>
-            <div class="cinco">5</div>
-            <div class="seis">6</div>
-            <div class="seis">+</div>
-            <div class="um">1</div>
-            <div class="dois">2</div>
-            <div class="tres">3</div>
-            <div class="igual">=</div>
-            <div class="zero">0</div>
-            <div class="virgula">,</div>
+            <div class="clear" id="clear">C</div>
+            <div class="backspace" onclick="deleteCalc()"><i class="fa-solid fa-delete-left"></i></div>
+            <div class="divisao" onclick="operacao('/')">/</div>
+            <div class="multiplicar" onclick="operacao('*')">*</div>
+            <div class="sete" onclick="num(7)">7</div>
+            <div class="oito" onclick="num(8)">8</div>
+            <div class="nove" onclick="num(9)">9</div>
+            <div class="subtrair" onclick="operacao('-')">-</div>
+            <div class="quatro" onclick="num(4)">4</div>
+            <div class="cinco" onclick="num(5)">5</div>
+            <div class="seis" onclick="num(6)">6</div>
+            <div class="seis" onclick="operacao('+')">+</div>
+            <div class="um" onclick="num(1)">1</div>
+            <div class="dois" onclick="num(2)">2</div>
+            <div class="tres" onclick="num(3)">3</div>
+            <div class="igual" onclick="calcular()">=</div>
+            <div class="zero" onclick="num(0)">0</div>
+            <div class="virgula" onclick="num('.')">.</div>
         </div>
     </div>
+    <script src="javascript/index.js"></script>
 </body>
 </html>
